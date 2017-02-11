@@ -18,7 +18,7 @@ VOLUME ["/home/steam/ARK-Staging", "/home/steam/ARK-Backups", "/etc/arkmanager",
 #ENTRYPOINT ["echo"]
 ADD "start.sh" "/home/steam/start.sh"
 RUN chown steam:steam /home/steam/start.sh
-RUN chmod 777 /home/steam/start.sh
+RUN chmod 550 /home/steam/start.sh
 # ENTRYPOINT ["arkmanager", "--verbose"]
 # ENTRYPOINT ["bash"]
 USER steam
