@@ -6,7 +6,7 @@ RUN apt-get install -y curl nano lsof lib32stdc++6 libc6-i386 lib32gcc1 cron
 RUN useradd -m steam
 USER steam
 WORKDIR /home/steam
-RUN mkdir steamcmd Ark
+RUN mkdir steamcmd Ark ARK-Staging ARK-Backups
 WORKDIR /home/steam/steamcmd
 RUN curl -sqL "https://steamcdn-a.akamaihd.net/client/installer/steamcmd_linux.tar.gz" | tar zxvf -
 WORKDIR /home/steam
@@ -14,7 +14,7 @@ USER root
 RUN curl -sL http://git.io/vtf5N | bash -s steam
 RUN systemctl disable arkmanager.service
 
-VOLUME ["/home/steam/ARK-Staging", "/home/steam/ARK-Backups", "/etc/arkmanager", "/usr/local/share/arkmanager", "/home/steam/ARK"]
+VOLUME ["/home/steam/ARK-Staging", "/home/steam/ARK-Backups", "/etc/arkmanager", "/usr/local/share/arkmanager", "/home/steam/Ark"]
 #ENTRYPOINT ["echo"]
 ADD "start.sh" "/home/steam/start.sh"
 RUN chown -R steam:steam /home/steam/*
