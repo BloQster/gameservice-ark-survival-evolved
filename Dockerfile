@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get install -y curl nano lsof lib32stdc++6 libc6-i386 lib32gcc1 cron
+RUN apt-get install -y curl nano lsof lib32stdc++6 libc6-i386 lib32gcc1 cron bzip2
 
 RUN useradd -m steam
 USER steam
