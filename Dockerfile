@@ -14,7 +14,7 @@ USER root
 RUN curl -sL http://git.io/vtf5N | bash -s steam
 RUN systemctl disable arkmanager.service
 
-VOLUME ["/home/steam/ARK-Staging", "/home/steam/ARK-Backups", "/etc/arkmanager", "/usr/local/share/arkmanager"]
+VOLUME ["/home/steam/ARK-Staging", "/home/steam/ARK-Backups", "/etc/arkmanager", "/usr/local/share/arkmanager", "/home/steam/ARK"]
 #ENTRYPOINT ["echo"]
 ADD "start.sh" "/home/steam/start.sh"
 RUN chown steam:steam /home/steam/start.sh
