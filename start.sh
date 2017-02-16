@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
-arkmanager upgrade-tools
+#arkmanager upgrade-tools
 arkmanager install --verbose
 if [ ! -f "/home/steam/ark_installed" ]
 then
